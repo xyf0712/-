@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9 no-focus" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-focus" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>HI物联网管理系统</title>
+
+        <meta name="description" content="物联网管理平台">
+        <meta name="author" content="环宇物联网管理平台">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <!-- Icons -->
+        <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+        <link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="assets/img/favicons/favicon-192x192.png" sizes="192x192">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=d4FY68q3WyUbe6UAGni6v6dkneXaKSaF"></script>
+
+        <!-- END Icons -->
+
+        <!-- Stylesheets -->
+        <!-- Web fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+
+        <!-- Bootstrap and OneUI CSS framework -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
+        <link rel="stylesheet" href="assets/css/customize.css">
+        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+        <!-- END Stylesheets -->
+    </head>
+    <body class="Home">
+        <!-- Page Container -->
+        <!--
+            Available Classes:
+
+            'enable-cookies'             Remembers active color theme between pages (when set through color theme list)
+
+            'sidebar-l'                  Left Sidebar and right Side Overlay
+            'sidebar-r'                  Right Sidebar and left Side Overlay
+            'sidebar-mini'               Mini hoverable Sidebar (> 991px)
+            'sidebar-o'                  Visible Sidebar by default (> 991px)
+            'sidebar-o-xs'               Visible Sidebar by default (< 992px)
+
+            'side-overlay-hover'         Hoverable Side Overlay (> 991px)
+            'side-overlay-o'             Visible Side Overlay by default (> 991px)
+
+            'side-scroll'                Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (> 991px)
+
+            'header-navbar-fixed'        Enables fixed header
+        -->
+        <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <!-- Sidebar Scroll Container -->
+                <div id="sidebar-scroll">
+                    <!-- Sidebar Content -->
+                    <!-- Adding .sidebar-mini-hide to an element will hide it when the sidebar is in mini mode -->
+                    <div class="sidebar-content">
+                        <!-- Side Header -->
+                        <div class="side-header side-content bg-white-op">
+                            <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                            <button class="btn btn-link text-gray pull-right hidden-md hidden-lg" type="button" data-toggle="layout" data-action="sidebar_close">
+                                <i class="fa fa-times"></i>
+                            </button>
+                            <a class="h5 text-white" href="home_page.html">
+                                <img class="sidebar_logo" src="assets/img/bg_img/sidebar_logo.png" alt=""> <span class="h5 sidebar-mini-hide">物联网管理系统</span>
+                            </a>
+                        </div>
+                        <!-- END Side Header -->
+
+                        <!-- Side Content -->
+                        <div class="side-content">
+                            <ul class="nav-main">
+                                <li class="nav-main-heading"><i class="fa fa-map-signs"></i> <span class="sidebar-mini-hide">导航指示</span></li>
+                                <li>
+                                    <a class="" href="home_page.html"><i class="glyphicon glyphicon-home"></i><span class="sidebar-mini-hide">首页</span></a>
+                                </li>
+                                <li>
+                                    <a class="nav-submenu" href="fire_alarm_host.html"><i class="fa fa-server"></i><span class="sidebar-mini-hide">消防报警主机</span></a>
+                                </li>
+                                <li>   <!-- data-toggle="nav-submenu" 二级菜单备用 -->
+                                  <a class="nav-submenu" href="building_water_system.html"><i class="fa fa-shower"></i><span class="sidebar-mini-hide">楼宇水系统</span></a>
+                                    <!-- <ul>
+                                        <li>
+                                            <a href="#">文字</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">文字</a>
+                                        </li>`
+                                        <li>
+                                            <a href="#">文字</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">文字</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">文字</a>
+                                        </li>
+                                    </ul> -->
+                                </li>
+                                <li>
+                                    <a class="nav-submenu" href="electrical_fire.html"><i class="fa fa-plug"></i><span class="sidebar-mini-hide">电气火灾</span></a>
+                                </li>
+                                <li>
+                                    <a class="nav-submenu" href="freestanding_smoke.html"><i class="glyphicon glyphicon-fire"></i><span class="sidebar-mini-hide">独立式烟感</span></a>
+                                </li>
+                                <li>
+                                    <a class="nav-submenu" href="municipal_fire_hydrant.html"><i class="fa fa-bank"></i><span class="sidebar-mini-hide">市政消火栓</span></a>
+                                </li>
+                                <li>
+                                    <a class="nav-submenu" href="other_firefighting_equipment.html"><i class="fa fa-bell-o"></i><span class="sidebar-mini-hide">其他消防设备</span></a>
+                                </li>
+                                <li>
+                                    <a class="nav-submenu" href="elevator_monitoring.html"><i class="fa fa-building-o"></i><span class="sidebar-mini-hide">电梯监控</span></a>
+                                </li>
+                                <li>
+                                    <a class="nav-submenu" href="video_surveillance.html"><i class="fa fa-video-camera"></i><span class="sidebar-mini-hide">视频监控</span></a>
+                                </li>
+                                <li>
+                                    <a class="nav-submenu" href="inspection_maintenance.html"><i class="fa fa-wrench"></i><span class="sidebar-mini-hide">巡检维护</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- END Side Content -->
+                        <div class="currentTime">
+                            <ul class="list-unstyled">
+                                <li class="text-center push-5 push-10-t">2018-03-19</li>
+                                <li class="text-center push-5 push-10-t">今天是周一</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Sidebar Content -->
+                </div>
+                <!-- END Sidebar Scroll Container -->
+            </nav>
+            <!-- END Sidebar -->
+
+            <!-- Header -->
+            <header id="header-navbar" class="content-mini content-mini-full">
+                <!-- Header Navigation Right -->
+                <ul class="nav-header pull-right">
+                    <li class="Fast">
+                        <div class="btn-group">
+                            <button class="btn btn-image dropdown-toggle" data-toggle="dropdown" type="button">
+                                <img src="assets/img/avatars/headerAvatar_img.png" alt="Avatar">admin管理员
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-header">用户设置</li>
+                                <li>
+                                    <a tabindex="-1" href="inbox_page.html">
+                                        <i class="si si-envelope-open pull-right"></i>
+                                        <span class="badge badge-primary pull-right">3</span>消息通知
+                                    </a>
+                                </li>
+                                <li><a tabindex="-1" href="profile_page.html"><i class="si si-user pull-right"></i>基本资料</a></li>
+                                <li>
+                                    <a tabindex="-1" href="lock_page.html">
+                                        <i class="si si-lock pull-right"></i>锁定账号
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="Fast"><a class="btn" tabindex="-1" href="javascript:void(0)"><i class="si si-settings"></i></a></li>
+                    <li class="Fast"><a class="btn" tabindex="-1" href="javascript:void(0)"><i class="si si-info"></i></a></li>
+                    <li class="Fast"><a class="btn" tabindex="-1" href="login_page.html"><i class="si si-logout"></i></a></li>
+                </ul>
+                <!-- END Header Navigation Right -->
+
+                <!-- Header Navigation Left -->
+                <ul class="nav-header pull-left">
+                    <li class="hidden-md hidden-lg">
+                        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                        <button class="btn btn-default" data-toggle="layout" data-action="sidebar_toggle" type="button">
+                            <i class="fa fa-navicon"></i>
+                        </button>
+                    </li>
+                    <li class="hidden-xs hidden-sm">
+                        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() 侧左导航折叠切换 -->
+                        <button class="btn btn-navSize" data-toggle="layout" data-action="sidebar_mini_toggle" type="button">
+                            <i class="fa fa-caret-left nav_Small_Arrow"></i>
+                            <i class="fa fa-navicon btn-navColor"></i>
+                        </button>
+                    </li>
+                    <li class="visible-xs">
+                        <!-- Toggle class helper (for .js-header-search below), functionality initialized in App() -> uiToggleClass() -->
+                        <button class="btn btn-default" data-toggle="class-toggle" data-target=".js-header-search" data-class="header-search-xs-visible" type="button">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </li>
+                </ul>
+                <!-- END Header Navigation Left -->
+            </header>
+            <!-- END Header -->
+
+            <!-- Main Container -->
+            <main id="main-container">
+                <!-- Page Content -->
+                <div class="content content-narrow">
+                    <!-- Background Colored Vertical Tiles -->
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="block">
+                                <table class="block-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="bg-success text-center" style="width: 30%;">
+                                                <div class="push-30 push-30-t">
+                                                    <i class="glyphicon glyphicon-fire fa-3x text-white-op"></i>
+                                                </div>
+                                            </td>
+                                            <td style="width: 70%;" class="text-left">
+                                                <div class="h5 text-success text-uppercase push-5">总数</div>
+                                                <div class="h2 font-w300 text-primary-darker" data-toggle="countTo" data-to="5645"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="block">
+                                <table class="block-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="bg-modern text-center" style="width: 30%;">
+                                                <div class="push-30 push-30-t">
+                                                    <i class="glyphicon glyphicon-tint fa-3x text-white-op"></i>
+                                                </div>
+                                            </td>
+                                            <td style="width: 70%;" class="text-left">
+                                                <div class="h5 text-modern text-uppercase push-5">隔离</div>
+                                                <div class="h2 font-w300 text-primary-darker" data-toggle="countTo" data-to="3543"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="block">
+                                <table class="block-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="bg-warning text-center" style="width: 30%;">
+                                                <div class="push-30 push-30-t">
+                                                    <i class="fa fa-wrench fa-3x text-white-op"></i>
+                                                </div>
+                                            </td>
+                                            <td style="width: 70%;" class="text-left">
+                                                <div class="h5 text-warning text-uppercase push-5">故障</div>
+                                                <div class="h2 font-w300 text-primary-darker" data-toggle="countTo" data-to="3414"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="block">
+                                <table class="block-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="bg-city text-center" style="width: 30%;">
+                                                <div class="push-30 push-30-t">
+                                                    <i class="fa fa-warning fa-3x text-white-op"></i>
+                                                </div>
+                                            </td>
+                                            <td style="width: 70%;" class="text-left">
+                                                <div class="h5 text-city text-uppercase push-5">火警</div>
+                                                <div class="h2 font-w300 text-primary-darker" data-toggle="countTo" data-to="7"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Background Colored Vertical Tiles -->
+                   <h2 class="content-heading">调用百度地图API</h2>
+                    <!-- Maps Row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Search Map -->
+                            <div class="block">
+                                <div class="block-content block-content-mini">
+                                    <!-- Search Form -->
+                                    <form class="js-form-search push-10" action="base_comp_maps.html" method="post">
+                                        <div class="input-group input-group-lg">
+                                            <input class="js-search-address form-control" type="text" placeholder="Search...">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- END Search Form -->
+                                </div>
+                                <!-- Search Map Container -->
+                                <div id="js-map-search" style="height: 500px;"></div>
+                            </div>
+                            <!-- END Search Map -->
+                        </div>
+                    </div>
+                    <!-- END Maps Row -->
+                </div>
+                <!-- END Page Content -->
+            </main>
+            <!-- END Main Container -->
+
+            <!-- Footer -->
+            <footer id="page-footer" class="content-mini content-mini-full font-s12 bg-gray-lighter clearfix">
+                <div class="pull-right">
+                    Crafted with <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="#" target="_blank">努力的小姐姐们</a>
+                </div>
+                <div class="pull-left">
+                    <a class="font-w600" href="#" target="_blank">&copy;物联网管理系统 1.1</a>
+                </div>
+            </footer>
+            <!-- END Footer -->
+        </div>
+        <!-- END Page Container -->
+
+        <!-- END Apps Modal -->
+
+        <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/bootstrap.min.js"></script>
+        <script src="assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="assets/js/core/jquery.appear.min.js"></script>
+        <script src="assets/js/core/jquery.countTo.min.js"></script>
+        <script src="assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="assets/js/core/js.cookie.min.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <!-- Page Plugins -->
+        <script src="assets/js/plugins/chartjs/Chart.min.js"></script>
+        <script src="assets/js/plugins/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+        <script>
+            jQuery(function () {
+                // Init page helpers (CountTo plugin)
+                App.initHelpers('appear-countTo');
+                App.initHelpers('notify');
+            });
+        </script>
+        <script type="text/javascript">
+              $(function () {
+                var map = new BMap.Map("js-map-search");    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(121.29, 31.14), 11);  // 初始化地图,设置中心点坐标和地图级别
+    //添加地图类型控件
+    map.addControl(new BMap.MapTypeControl({
+        mapTypes:[
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+        ]}));     
+    map.setCurrentCity("上海");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);
+                $.notify({
+                    // options
+                    icon: 'si si-bulb',
+                    title: '',
+                    message: '新的报警设备！',
+                    url: '',
+                    target: '_blank'
+                },{
+                    // settings
+                    type: 'danger',
+                    spacing: 10,
+                    z_index: 1031,
+                    delay: 5000,
+                    timer: 1000,
+                    position: 'absolute',
+                    placement: {
+                        from: "bottom",
+                        align: "right"
+                    },
+                    offset: {
+                        x: 20,
+                        y: 10
+                    },
+                    animate: {
+                        enter: 'animated fadeInDown',
+                        exit: 'animated fadeOutUp'
+                    },
+                });
+               })
+
+        </script>
+    </body>
+</html>

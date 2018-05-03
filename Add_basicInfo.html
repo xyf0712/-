@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9 no-focus" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-focus" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>HI物联网管理系统--消防报警主机</title>
+    <meta name="description" content="物联网管理平台">
+    <meta name="author" content="环宇物联网管理平台">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="assets/img/favicons/favicon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+    <!-- Stylesheets -->
+    <!-- Web fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
+    <!-- Page JS Plugins CSS -->
+    <link rel="stylesheet" href="assets/js/plugins/select2/select2.min.css">
+    <link rel="stylesheet" href="assets/js/plugins/select2/select2-bootstrap.min.css">
+
+    <!-- Bootstrap and OneUI CSS framework -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" id="css-main" href="assets/css/oneui.css">
+    <link rel="stylesheet" href="assets/css/customize.css">
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+    <!-- END Stylesheets -->
+</head>
+
+<body class="Home">
+    <!-- Page Container -->
+    <!--
+            Available Classes:
+
+            'enable-cookies'             Remembers active color theme between pages (when set through color theme list)
+
+            'sidebar-l'                  Left Sidebar and right Side Overlay
+            'sidebar-r'                  Right Sidebar and left Side Overlay
+            'sidebar-mini'               Mini hoverable Sidebar (> 991px)
+            'sidebar-o'                  Visible Sidebar by default (> 991px)
+            'sidebar-o-xs'               Visible Sidebar by default (< 992px)
+
+            'side-overlay-hover'         Hoverable Side Overlay (> 991px)
+            'side-overlay-o'             Visible Side Overlay by default (> 991px)
+
+            'side-scroll'                Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (> 991px)
+
+            'header-navbar-fixed'        Enables fixed header
+        -->
+    <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <!-- Sidebar Scroll Container -->
+            <div id="sidebar-scroll">
+                <!-- Sidebar Content -->
+                <!-- Adding .sidebar-mini-hide to an element will hide it when the sidebar is in mini mode -->
+                <div class="sidebar-content">
+                    <!-- Side Header -->
+                    <div class="side-header side-content bg-white-op">
+                        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                        <button class="btn btn-link text-gray pull-right hidden-md hidden-lg" type="button" data-toggle="layout" data-action="sidebar_close">
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <a class="h5 text-white" href="home_page.html">
+                                <img class="sidebar_logo" src="assets/img/bg_img/sidebar_logo.png" alt=""> <span class="h5 sidebar-mini-hide">物联网管理系统</span>
+                            </a>
+                    </div>
+                    <!-- END Side Header -->
+                    <!-- Side Content -->
+                    <div class="side-content">
+                        <ul class="nav-main">
+                            <li class="nav-main-heading"><i class="fa fa-map-signs"></i> <span class="sidebar-mini-hide">导航指示</span></li>
+                            <li>
+                                <a class="" href="home_page.html"><i class="glyphicon glyphicon-home"></i><span class="sidebar-mini-hide">首页</span></a>
+                            </li>
+                            <li class="active">
+                                <a class="active nav-submenu" href="fire_alarm_host.html"><i class="fa fa-server"></i><span class="sidebar-mini-hide">消防报警主机</span></a>
+                            </li>
+                            <li>
+                                <!-- data-toggle="nav-submenu" 二级菜单备用 -->
+                                <a class="nav-submenu" href="building_water_system.html"><i class="fa fa-shower"></i><span class="sidebar-mini-hide">楼宇水系统</span></a>
+                                <!-- <ul>
+                                        <li>
+                                            <a href="#">文字</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">文字</a>
+                                        </li>`
+                                        <li>
+                                            <a href="#">文字</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">文字</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">文字</a>
+                                        </li>
+                                    </ul> -->
+                            </li>
+                            <li>
+                                <a class="nav-submenu" href="electrical_fire.html"><i class="fa fa-plug"></i><span class="sidebar-mini-hide">电气火灾</span></a>
+                            </li>
+                            <li>
+                                <a class="nav-submenu" href="freestanding_smoke.html"><i class="glyphicon glyphicon-fire"></i><span class="sidebar-mini-hide">独立式烟感</span></a>
+                            </li>
+                            <li>
+                                <a class="nav-submenu" href="municipal_fire_hydrant.html"><i class="fa fa-bank"></i><span class="sidebar-mini-hide">市政消火栓</span></a>
+                            </li>
+                            <li>
+                                <a class="nav-submenu" href="other_firefighting_equipment.html"><i class="fa fa-bell-o"></i><span class="sidebar-mini-hide">其他消防设备</span></a>
+                            </li>
+                            <li>
+                                <a class="nav-submenu" href="elevator_monitoring.html"><i class="fa fa-building-o"></i><span class="sidebar-mini-hide">电梯监控</span></a>
+                            </li>
+                            <li>
+                                <a class="nav-submenu" href="video_surveillance.html"><i class="fa fa-video-camera"></i><span class="sidebar-mini-hide">视频监控</span></a>
+                            </li>
+                            <li>
+                                <a class="nav-submenu" href="inspection_maintenance.html"><i class="fa fa-wrench"></i><span class="sidebar-mini-hide">巡检维护</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END Side Content -->
+                    <div class="currentTime">
+                        <ul class="list-unstyled">
+                            <li class="text-center push-5 push-10-t">2018-03-19</li>
+                            <li class="text-center push-5 push-10-t">今天是周一</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Sidebar Content -->
+            </div>
+            <!-- END Sidebar Scroll Container -->
+        </nav>
+        <!-- END Sidebar -->
+        <!-- Header -->
+        <header id="header-navbar" class="content-mini content-mini-full">
+            <!-- Header Navigation Right -->
+            <ul class="nav-header pull-right">
+                <li class="Fast">
+                    <div class="btn-group">
+                        <button class="btn btn-image dropdown-toggle" data-toggle="dropdown" type="button">
+                            <img src="assets/img/avatars/headerAvatar_img.png" alt="Avatar">admin管理员
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="dropdown-header">用户设置</li>
+                            <li>
+                                <a tabindex="-1" href="inbox_page.html">
+                                        <i class="si si-envelope-open pull-right"></i>
+                                        <span class="badge badge-primary pull-right">3</span>消息通知
+                                    </a>
+                            </li>
+                            <li><a tabindex="-1" href="profile_page.html"><i class="si si-user pull-right"></i>基本资料</a></li>
+                            <li>
+                                <a tabindex="-1" href="lock_page.html">
+                                        <i class="si si-lock pull-right"></i>锁定账号
+                                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="Fast"><a class="btn" tabindex="-1" href="javascript:void(0)"><i class="si si-settings"></i></a></li>
+                <li class="Fast"><a class="btn" tabindex="-1" href="javascript:void(0)"><i class="si si-info"></i></a></li>
+                <li class="Fast"><a class="btn" tabindex="-1" href="login_page.html"><i class="si si-logout"></i></a></li>
+            </ul>
+            <!-- END Header Navigation Right -->
+            <!-- Header Navigation Left -->
+            <ul class="nav-header pull-left">
+                <li class="hidden-md hidden-lg">
+                    <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                    <button class="btn btn-default" data-toggle="layout" data-action="sidebar_toggle" type="button">
+                        <i class="fa fa-navicon"></i>
+                    </button>
+                </li>
+                <li class="hidden-xs hidden-sm">
+                    <!-- Layout API, functionality initialized in App() -> uiLayoutApi() 侧左导航折叠切换 -->
+                    <button class="btn btn-navSize" data-toggle="layout" data-action="sidebar_mini_toggle" type="button">
+                        <i class="fa fa-caret-left nav_Small_Arrow"></i>
+                        <i class="fa fa-navicon btn-navColor"></i>
+                    </button>
+                </li>
+                <li class="visible-xs">
+                    <!-- Toggle class helper (for .js-header-search below), functionality initialized in App() -> uiToggleClass() -->
+                    <button class="btn btn-default" data-toggle="class-toggle" data-target=".js-header-search" data-class="header-search-xs-visible" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </li>
+            </ul>
+            <!-- END Header Navigation Left -->
+        </header>
+        <!-- END Header -->
+        <!-- Main Container -->
+        <main id="main-container">
+            <!-- Page Header -->
+            <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                            <h1 class="page-heading">新增基础信息</h1>
+                        </div>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>基础信息</li>
+                                <li><a class="link-effect" href="##">返回基础信息列表</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            <!-- END Page Header -->
+            <!-- Page Content -->
+            <div class="content">
+                     <!-- Bootstrap Forms Validation -->
+                            <div class="block additions">
+                                <div class="block-content row">
+                                    <!-- jQuery Validation (.js-validation-bootstrap class is initialized in js/pages/base_forms_validation.js) -->
+                                    <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
+                                    <form class="js-validation-bootstrap form-horizontal" action="" method="post">
+                                        <div class="col-lg-5">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="project_code">项目编码: <span class="text-danger">*</span></label>
+                                            <div class="col-md-7">
+                                                <input class="form-control" type="text" id="project_code" name="project_code" placeholder="项目编码">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="project_address">项目地址: <span class="text-danger">*</span></label>
+                                            <div class="col-md-7">
+                                                <textarea class="form-control" id="project_address" name="project_address" rows="5" placeholder="项目地址"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="construction_area">建筑面积: <span class="text-danger">*</span></label>
+                                            <div class="col-md-7">
+                                                <input class="form-control" type="text" id="construction_area" name="construction_area" placeholder="建筑面积">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="project_name">项目名称:<span class="text-danger">*</span></label>
+                                            <div class="col-md-7">
+                                                <input class="form-control" type="text" id="project_name" name="project_name" placeholder="项目名称">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="vcontact_number1">联系电话: <span class="text-danger">*</span></label>
+                                            <div class="col-md-7">
+                                                <input class="form-control" type="text" id="vcontact_number1" name="vcontact_number1" placeholder="联系电话">
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="col-lg-5">
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="maintenance_unit">维保单位: <span class="text-danger">*</span></label>
+                                            <div class="col-md-7">
+                                                <input class="form-control" type="text" id="maintenance_unit" name="maintenance_unit" placeholder="维保单位">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="owner_unit">业主单位: <span class="text-danger">*</span></label>
+                                            <div class="col-md-7">
+                                                <textarea class="form-control" id="owner_unit" name="owner_unit" rows="5" placeholder="业主单位"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="Fire_control_room">消防控制室: <span class="text-danger">*</span></label>
+                                            <div class="col-md-7">
+                                                <input class="form-control" type="text" id="Fire_control_room" name="Fire_control_room" placeholder="消防控制室">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="principal">负责人 <span class="text-danger">*</span></label>
+                                            <div class="col-md-7">
+                                                <input class="form-control" type="text" id="principal" name="principal" placeholder="负责人">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label" for="vcontact_number2">联系电话: <span class="text-danger">*</span></label>
+                                            <div class="col-md-7">
+                                                <input class="form-control" type="text" id="vcontact_number2" name="vcontact_number2" placeholder="联系电话">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-7 col-md-offset-4">
+                                                <button class="btn btn-block btn-primary" type="submit">保存新增</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Bootstrap Forms Validation --></div>
+            <!-- END Page Content -->
+        </main>
+        <!-- END Main Container -->
+        <!-- Footer -->
+        <footer id="page-footer" class="content-mini content-mini-full font-s12 bg-gray-lighter clearfix">
+            <div class="pull-right">
+                Crafted with <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="#" target="_blank">无锡云麓网络科技</a>
+            </div>
+            <div class="pull-left">
+                <a class="font-w600" href="#" target="_blank">&copy;物联网管理系统 1.1</a>
+            </div>
+        </footer>
+        <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+    <!-- END Apps Modal -->
+    <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
+    <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/bootstrap.min.js"></script>
+    <script src="assets/js/core/jquery.slimscroll.min.js"></script>
+    <script src="assets/js/core/jquery.scrollLock.min.js"></script>
+    <script src="assets/js/core/jquery.appear.min.js"></script>
+    <script src="assets/js/core/jquery.countTo.min.js"></script>
+    <script src="assets/js/core/jquery.placeholder.min.js"></script>
+    <script src="assets/js/core/js.cookie.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <!-- Page JS Plugins -->
+        <script src="assets/js/plugins/select2/select2.full.min.js"></script>
+        <script src="assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+        <script src="assets/js/plugins/jquery-validation/additional-methods.min.js"></script>
+
+        <!-- Page JS Code -->
+        <script>
+            jQuery(function () {
+                // Init page helpers (Select2 plugin)
+                App.initHelpers('select2');
+            });
+        </script>
+        <script src="assets/js/pages/base_forms_validation.js"></script>
+</body>
+
+</html>
